@@ -42,10 +42,20 @@ function Main({activeNote, onUpdateNote}) {
     marginBottom: 12,
   };
 
+  useEffect(() => {
+    if(activeNote){
+      setText(activeNote.body);
+    }
+  }, [activeNote]);
+
 
 
     // taking key we're updating and value
     const onEditField = (key, value) => {
+
+      if(key === "body"){
+        setText(value);
+      }
 
         // constructing the object that we are sending back
         // creating the function we will call firet
@@ -80,19 +90,21 @@ function Main({activeNote, onUpdateNote}) {
             autoFocus />
 
 
+            {/* Text to Speech working when passing in "text" value, Update does not work */}
             <textarea
               id="message"
               name="message"
               //rows={3}
               placeholder="Write your note here..."
-              value={text}
-              onChange={(event) => {
-                setText(event.target.value);
-              }}
+              value={activeNote.body}
+              // onChange={(event) => {
+              //   setText(event.target.value);
+              // }}
+              onChange={(e) => onEditField("body", e.target.value)}
             />
 
 
-            
+            {/* Update working when passing in "activeNote" value, Text to Speech  */}
             {/* <textarea 
             id="body" 
             name="body"
