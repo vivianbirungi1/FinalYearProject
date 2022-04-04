@@ -1,8 +1,16 @@
 import {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import uuid from 'react-uuid';
 import './App.css';
-import Main from './Main';
-import Sidebar from './Sidebar';
+import Main from './components/Main';
+import Sidebar from './components/Sidebar';
+//import Navbar from './components/Navbar';
+import NavNav from './components/NavNav';
+import Container from '@mui/material/Container';
+
+//import { Navbar } from 'react-bootstrap';
+// import { Nav } from 'react-bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -68,7 +76,11 @@ function App() {
 
 
   return (
+    
     <div className="App">
+
+     {/* <NavNav></NavNav> */}
+      
       <Sidebar 
       notes= {notes} 
       
@@ -81,6 +93,8 @@ function App() {
       setActiveNote={setActiveNote}
       
       />
+     
+
 
 {/* main has acccess to current active note */}
       <Main activeNote={getActiveNote()}
