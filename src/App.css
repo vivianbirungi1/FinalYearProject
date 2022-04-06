@@ -49,7 +49,7 @@ button:hover {
 /* SIDEBAR STYLES */
 
 .app-sidebar {
-  width: 30%;
+  width: 100%;
   height: 100vh;
   border-right: 1px solid #ddd;
 }
@@ -98,7 +98,7 @@ button:hover {
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
 
 .app-main {
-  width: 70%;
+  width: 100%;
   height: 100vh;
 }
 .app-main-note-edit,
@@ -107,7 +107,7 @@ button:hover {
 }
 
 .no-active-note {
-  width: 70%;
+  width: 100%;
   height: 100vh;
   line-height: 100vh;
   text-align: center;
@@ -161,118 +161,9 @@ textarea {
   line-height: 2rem;
 }
 
-.group,
-.group-1,
-.group-2,
-.group-3,
-.group-4,
-.group-5,
-.group-6 {
-  align-items: flex-start;
-  display: flex;
-  height: 24px;
-  min-width: 266px;
-}
+/* .left{
+  margin-left: 100px;
+  padding: 300px;
+} */
 
-.home,
-.home-1,
-.home-2,
-.home-3,
-.home-4,
-.home-5,
-.home-6 {
-  color: var(--colourmainblue500);
-  font-weight: 400;
-  line-height: 24px;
-  min-height: 24px;
-  min-width: 38px;
-  white-space: nowrap;
-}
-
-.about,
-.about-2,
-.about-4,
-.about-6,
-.about-8,
-.about-10,
-.about-12 {
-  color: var(--colourmainblue500);
-  font-weight: 400;
-  line-height: 24px;
-  margin-left: 24px;
-  min-height: 24px;
-  min-width: 113px;
-  white-space: nowrap;
-}
-
-.about-1,
-.about-3,
-.about-5,
-.about-7,
-.about-9,
-.about-11,
-.about-13 {
-  color: var(--colourmainblue500);
-  font-weight: 400;
-  line-height: 24px;
-  margin-left: 33px;
-  min-height: 24px;
-  white-space: nowrap;
-}
-
-.nav-nav-2 {
-  align-items: flex-start;
-  display: flex;
-  min-width: 1488px;
-}
-
-.overlap-group1-1 {
-  height: 66px;
-  position: relative;
-  width: 1488px;
-}
-
-.rectangle-17-3 {
-  background-color: var(--coloursecondarywhite-100-general);
-  height: 66px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
-.overlap-group-7 {
-  height: 60px;
-  left: 48px;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
-.landie-2 {
-  color: var(--colourlogoprimary);
-  font-weight: 900;
-  left: 706px;
-  line-height: 38px;
-  position: absolute;
-  top: 12px;
-  white-space: nowrap;
-}
-
-.nav-2 {
-  align-items: center;
-  display: flex;
-  height: 60px;
-  left: 0;
-  min-width: 1440px;
-  padding: 16px 165px;
-  position: absolute;
-  top: 0;
-}
-
-.nav-nav-2.nav-nav-3,
-.nav-nav-2.nav-nav-4,
-.nav-nav-2.nav-nav-5 {
-  margin-right: -48px;
-}
 

@@ -3,7 +3,15 @@ import React from 'react';
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {useEffect, useState} from 'react';
 
-function Main({activeNote, onUpdateNote}) {
+function Main (props) {
+
+   
+
+        const{
+          activeNote,
+          onUpdateNote
+        } = props;
+
 
         const [text, setText] = useState(null);
         const [pitch, setPitch] = useState(1);
@@ -54,7 +62,8 @@ function Main({activeNote, onUpdateNote}) {
         });
 
     };
-    
+
+  
 
     if(!activeNote) return <div className="no-active-note">Add a new note</div>
 
