@@ -8,19 +8,11 @@ import Container from '@mui/material/Container';
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 
-
 import NavNav from './components/NavNav';
 
 //PAGES
  import Home from './pages/Home';
-// import Main from './pages/notes/Main';
-// import Sidebar from './pages/notes/Sidebar';
 
-
-
-//import { Navbar } from 'react-bootstrap';
-// import { Nav } from 'react-bootstrap';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
