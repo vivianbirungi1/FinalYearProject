@@ -2,6 +2,8 @@ import ReactMarkdown from "react-markdown";
 import React from 'react';
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {useEffect, useState} from 'react';
+import play from '../images/play.png';
+import pause from '../images/pause.png';
 
 function Main({activeNote, onUpdateNote}) {
 
@@ -163,14 +165,14 @@ function Main({activeNote, onUpdateNote}) {
 
             {speaking ? (
               <button type="button" onClick={cancel}>
-                Stop
+                <img className="photo2" src={pause} />
               </button>
             ) : (
               <button
                 type="button"
                 onClick={() => speak({text, voice, rate, pitch })}
               >
-                Speak
+                <img className="photo" src={play} />
               </button>
             )}
    

@@ -166,4 +166,20 @@ textarea {
   padding: 300px;
 } */
 
+.push-left{
+  padding-left: 25ps;
+}
+
+.photo{
+  height: 70px;
+  width: 70px;
+  margin-left: 500px;
+}
+
+.photo2{
+  height: 70px;
+  width: 70px;
+  margin-left: 500px;
+}
+
 
