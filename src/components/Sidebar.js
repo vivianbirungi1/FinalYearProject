@@ -1,6 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
+import {useState} from 'react';
 
 function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
@@ -51,6 +52,26 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
         },
       }));
 
+    //   const [searchInput, setSearchInput] = useState("");
+     
+    //   const title = [1]
+
+    //   const title = [
+    //       {title}
+    //   ]
+
+    //   title = {title}
+
+    //   const handleChange = (e) => {
+    //     e.preventDefault();
+    //     setSearchInput(e.target.value);
+    //   };
+    //   if (searchInput.length > 0) {
+    //       title.filter((title) => {
+    //       return title.name.match(searchInput);
+    //   });
+    //   }
+
 
     return <div className="app-sidebar">
 
@@ -71,6 +92,9 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+            // type='text'
+            // onChange={handleChange}
+            // value={searchInput}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />

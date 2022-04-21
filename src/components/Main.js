@@ -2,8 +2,12 @@ import ReactMarkdown from "react-markdown";
 import React from 'react';
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {useEffect, useState} from 'react';
-import play from '../images/play.png';
-import pause from '../images/pause.png';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import StopIcon from '@mui/icons-material/Stop';
+import Typography from '@mui/material/Typography';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 
 function Main({activeNote, onUpdateNote}) {
 
@@ -109,8 +113,26 @@ function Main({activeNote, onUpdateNote}) {
 
                 <ReactMarkdown className="markdown-preview">{activeNote.body}</ReactMarkdown> */}
 
-                <label htmlFor="voice">Voice</label>
+{speaking ? (
+              <button type="button" onClick={cancel}>
+                <StopIcon sx={{ color: '#000000', fontSize: 70 }}/>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => speak({text, voice, rate, pitch })}
+              >
+                <PlayArrowIcon sx={{  color: '#000000', fontSize: 70 }}/>
+              </button>
+            )}
+
+
+                <div>
+                <Typography variant="h6" component="div" htmlFor="voice">Voice</Typography>
+                </div>
+
             <select
+              className="top"
               id="voice"
               name="voice"
               value={voiceIndex || ''}
@@ -126,10 +148,10 @@ function Main({activeNote, onUpdateNote}) {
               ))}
             </select>
 
-            <div style={styleContainerRatePitch}>
+            <div className="top" style={styleContainerRatePitch}>
               <div style={styleFlexRow}>
-                <label htmlFor="rate">Rate: </label>
-                <div className="rate-value">{rate}</div>
+                <Typography variant="h6" component="div" htmlFor="rate">Rate: </Typography>
+                <Typography variant="h6" component="div" className="rate-value">{rate}</Typography>
               </div>
               <input
                 type="range"
@@ -143,10 +165,10 @@ function Main({activeNote, onUpdateNote}) {
                 }}
               />
             </div>
-            <div style={styleContainerRatePitch}>
+            <div className="top" style={styleContainerRatePitch}>
               <div style={styleFlexRow}>
-                <label htmlFor="pitch">Pitch: </label>
-                <div className="pitch-value">{pitch}</div>
+                <Typography variant="h6" component="div" htmlFor="pitch">Pitch: </Typography>
+                <Typography variant="h6" component="div" className="pitch-value">{pitch}</Typography>
               </div>
               <input
                 type="range"
@@ -160,21 +182,6 @@ function Main({activeNote, onUpdateNote}) {
                 }}
               />
             </div>
-
-            
-
-            {speaking ? (
-              <button type="button" onClick={cancel}>
-                <img className="photo2" src={pause} />
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => speak({text, voice, rate, pitch })}
-              >
-                <img className="photo" src={play} />
-              </button>
-            )}
    
 
                 {/* <div className="app-main-note-voice">

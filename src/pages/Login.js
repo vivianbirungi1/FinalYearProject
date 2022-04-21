@@ -8,10 +8,6 @@ import Container from '@mui/material/Container';
 import {Link} from 'react-router-dom'
 
 
-
-//check if auth is true
-//creating component for login form
-
 const Login = props => {
 
   let navigate = useNavigate()

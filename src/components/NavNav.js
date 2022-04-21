@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -9,6 +10,8 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuItem from '@mui/material/MenuItem';
+
+
 
 // const Search = styled('div')(({ theme }) => ({
 //   position: 'relative',
@@ -52,7 +55,21 @@ import MenuItem from '@mui/material/MenuItem';
 //   },
 // }));
 
+
+
 export default function SearchAppBar() {
+
+  let navigate = useNavigate()
+
+const register = () => {
+  //props.onAuthenticated(false)
+  navigate('/register')
+}
+
+const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDecoration: 'none' }}>Home</Link>, <Link className='link' to="/speechrec" style={{ color: '#505F98', textDecoration: 'none' }}>Speech Recognition</Link>, <Link className='link' to="/settings" style={{ color: '#505F98', textDecoration: 'none' }}> Settings</Link>];
+  const settings = [<Link className='link' to="/login" style={{ color: '#505F98', textDecoration: 'none' }}>Login</Link>, <Link className='link' to="register" style={{ color: '#505F98', textDecoration: 'none' }}>Register</Link>];
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{backgroundColor: '#ffffff'}}>
@@ -67,43 +84,27 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
 
-          <MenuItem>
+          {pages.map((page) => (
+          <MenuItem key={page}>
           <Typography
             variant="h7"
             noWrap
             component="div"
             sx={{ color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Home
+            {page}
           </Typography>
           </MenuItem>
+          ))}
 
-          <MenuItem>
-          <Typography
-            variant="h7"
-            noWrap
-            component="div"
-            sx={{ color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Speech Recognition
-          </Typography>
-          </MenuItem>
+          
 
-          <MenuItem>
-          <Typography
-            variant="h7"
-            noWrap
-            component="div"
-            sx={{ color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Settings
-          </Typography>
-          </MenuItem>
 
 
           <Typography
             variant="h6"
             noWrap
+            textAlign="center"
             component="div"
             sx={{color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
@@ -118,27 +119,21 @@ export default function SearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search> */}
-          <MenuItem>
+          
+          {settings.map((setting) => ( 
+          <MenuItem key={setting}>
           <Typography
             variant="h7"
             noWrap
             component="div"
             sx={{ color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Login
+            {setting}
           </Typography>
           </MenuItem>
+          ))}
 
-          <MenuItem>
-          <Typography
-            variant="h7"
-            noWrap
-            component="div"
-            sx={{ color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Register
-          </Typography>
-          </MenuItem>
+          
         </Toolbar>
       </AppBar>
     </Box>

@@ -71,6 +71,7 @@ const getActiveNote = () => {
 
       <Grid item md={4}>
           <Sidebar 
+
       notes= {notes} 
       
       onAddNote={onAddNote} 

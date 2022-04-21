@@ -13,6 +13,9 @@ import NavNav from './components/NavNav';
 //PAGES
  import Home from './pages/Home';
  import Login from './pages/Login';
+ import Register from './pages/Register';
+ import Settings from './pages/Settings';
+ import SpeechRec from './pages/SpeechRec';
 
 
 
@@ -115,6 +118,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/speechrec" element={<SpeechRec />} />
+        <Route path="/register" element={<Register />} />
+
+
         
       </Routes>
     </Router>

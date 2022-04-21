@@ -170,16 +170,22 @@ textarea {
   padding-left: 25ps;
 }
 
-.photo{
-  height: 70px;
-  width: 70px;
-  margin-left: 500px;
+
+.icon-align{
+  padding: .5rem .8rem .5rem .8rem;
 }
 
-.photo2{
-  height: 70px;
-  width: 70px;
-  margin-left: 500px;
+select{
+  display: block;
+    width: 90%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
+.top{
+  padding-top: 10px;
+}
 
