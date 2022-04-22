@@ -48,8 +48,8 @@ const Login = props => {
     <Link className='link' to="/login" style={{ color: '#505F98', textDecoration: 'none' }}>Already have an account? Login!</Link>
 
     <div className='top'>
-    <GoogleIcon sx={{ color: '#F3AD2E', fontSize: 40 }} /> Login with Google
-    <FacebookIcon sx={{ color: '#092186', fontSize: 40 }}/> Login with Facebook
+    <Button style={{borderRadius: 25}}><GoogleIcon sx={{ color: '#F3AD2E', fontSize: 40 }} /> Sign up with Google</Button>
+    <Button style={{borderRadius: 25}}><FacebookIcon sx={{ color: '#092186', fontSize: 40 }}/> Sign up with Facebook</Button>
     </div>
 
         <div className="form-group loginForm">
