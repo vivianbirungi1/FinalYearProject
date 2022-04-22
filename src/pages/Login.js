@@ -36,7 +36,7 @@ const Login = props => {
     
     <Grid container spacing={1}>
 
-    <Grid className='bgGrey' item md = {6} xs={6}>
+    <Grid item md = {6} xs={6}>
     <Typography className='loginTop top' variant="h2">Welcome Back</Typography>
 
     <Link className='link' to="/register" style={{ color: '#505F98', textDecoration: 'none' }}>New to the site? Register Now!</Link>

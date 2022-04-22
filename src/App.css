@@ -214,14 +214,41 @@ select{
   padding-top: 80px ;
 }
 
+
+.top2{
+  padding-top: 40px ;
+}
+
+.top3{
+  padding-top: 20px ;
+}
+
+.settingsTop{
+  padding-top: 45px ;
+}
+
 .image{
   width: 650px;
   height: 650px;
 }
 
 .bgGrey{
-  /* background-color:#F5F5F5; */
-  margin: 15px;
+  background-color:#F5F5F5;
+  
+}
+
+.settings{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.darkmode{
+  background-color: black;
+}
+
+.darkmode h2{
+  color: white;
 }
 
 
