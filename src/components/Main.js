@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StopIcon from '@mui/icons-material/Stop';
 import Typography from '@mui/material/Typography';
+import {TextField, Button} from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
@@ -114,16 +115,17 @@ function Main({activeNote, onUpdateNote}) {
                 <ReactMarkdown className="markdown-preview">{activeNote.body}</ReactMarkdown> */}
 
 {speaking ? (
-              <button type="button" onClick={cancel}>
+              <Button type="button" style={{marginLeft: "550px"}} onClick={cancel}>
                 <StopIcon sx={{ color: '#000000', fontSize: 70 }}/>
-              </button>
+              </Button>
             ) : (
-              <button
+              <Button
                 type="button"
+                style={{marginLeft: "550px"}}
                 onClick={() => speak({text, voice, rate, pitch })}
               >
                 <PlayArrowIcon sx={{  color: '#000000', fontSize: 70 }}/>
-              </button>
+              </Button>
             )}
 
 

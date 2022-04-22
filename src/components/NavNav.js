@@ -97,10 +97,7 @@ const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDeco
           </MenuItem>
           ))}
 
-          
-
-
-
+        
           <Typography
             variant="h6"
             noWrap

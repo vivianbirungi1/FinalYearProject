@@ -5,7 +5,12 @@ import {TextField, Button} from '@mui/material';
 import { useNavigate  } from 'react-router';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {Grid} from '@material-ui/core';
+import login from '../images/login.png';
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 
 
 const Login = props => {
@@ -29,38 +34,49 @@ const Login = props => {
   return (
     <Container>
     
-    <div class="header-text">
-        <Typography variant="h2">Login</Typography>
-      </div>
+    <Grid container spacing={1}>
 
-      <div class="short-top">
-        <img src="https://cdn.dribbble.com/users/1090020/screenshots/13813353/media/01ddddf5649e5a5cb569c2478881092d.png?compress=1&resize=1150x350"></img>
+    <Grid className='bgGrey' item md = {6} xs={6}>
+    <Typography className='loginTop top' variant="h2">Welcome Back</Typography>
+
+    <Link className='link' to="/register" style={{ color: '#505F98', textDecoration: 'none' }}>New to the site? Register Now!</Link>
+
+    <div className='top'>
+    <GoogleIcon sx={{ color: '#F3AD2E', fontSize: 40 }} /> Login with Google
+    <FacebookIcon sx={{ color: '#092186', fontSize: 40 }}/> Login with Facebook
+    </div>
+
+        <div className="form-group loginForm">
+        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email" onChange={handleForm} /> <br />
+        </div>
+
+        <div className="form-group loginForm">
+        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" onChange={handleForm} />
+        </div>
+
         
-      </div>
-
-      <div className="form-group form-top">
-        <TextField label="Name" fullWidth sx={{ s: 1 }} variant="standard" name= "name" onChange={handleForm} /> <br />
-        </div>
-
-        <div className="form-group form-top">
-        <TextField label="Email" fullWidth sx={{ s: 1 }} variant="standard" name= "email" onChange={handleForm} /> <br />
-        </div>
-
-        <div className="form-group form-top">
-        <TextField label="Password" fullWidth sx={{ s: 1 }} variant="standard" type="password" name= "password" onChange={handleForm} />
-        </div>
-
-        <div class="short-top">
-        <Typography variant="p">
-          <Link to="/register" >New to the site? Register Now!</Link>
-        </Typography>
-        </div>
 
 
       <div class="content-spacing centertext">
-      <Button color="warning" variant="contained">Submit</Button>
+      <Button style={{
+        borderRadius: 35,
+        backgroundColor: "#FFBA3E",
+        padding: "18px 36px",
+        contentAlign: "center",
+        fontSize: "18px"
+    }} variant="contained">Login</Button>
       </div>
 
+    </Grid>
+
+    <Grid item md={6} xs={4}>
+      
+        <img className="imageTop image" src={login} />
+ 
+      </Grid>
+    </Grid>
+      
+   
 
     </Container>
   )

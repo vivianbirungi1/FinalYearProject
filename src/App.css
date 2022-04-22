@@ -19,7 +19,7 @@
 }
 body,
 .App {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, "Arial", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   height: 100vh;
@@ -188,4 +188,40 @@ select{
 .top{
   padding-top: 10px;
 }
+
+.loginForm{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.TextField-with-radius fieldset {
+  border-radius: 35;
+}
+
+.btnColor{
+  color: #FFBA3E;
+}
+
+.imageTop{
+  padding-top: 60px ;
+}
+
+.centertext{
+  text-align: center;
+}
+
+.loginTop{
+  padding-top: 80px ;
+}
+
+.image{
+  width: 650px;
+  height: 650px;
+}
+
+.bgGrey{
+  /* background-color:#F5F5F5; */
+  margin: 15px;
+}
+
 
