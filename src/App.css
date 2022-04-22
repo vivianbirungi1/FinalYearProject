@@ -243,11 +243,13 @@ select{
   justify-content: space-between;
 }
 
-.darkmode{
-  background-color: black;
+.white-content {
+  background: #000000;
+  color: white;
 }
 
-.darkmode h2{
+.white-content body {
+  background: #000000;
   color: white;
 }
 

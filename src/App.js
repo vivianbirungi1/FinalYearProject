@@ -7,8 +7,9 @@ import Container from '@mui/material/Container';
 //COMPONENETS
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
-
 import NavNav from './components/NavNav';
+import ThemeContextWrapper from './components/themeContextWrapper';
+import { ThemeContext } from './components/contextTheme';
 
 //PAGES
  import Home from './pages/Home';

@@ -14,16 +14,14 @@ import {Button} from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {useEffect, useState} from 'react';
-
+import { ThemeContext, themes } from './contextTheme';
+import ToggleDark from './toggleDark';
 
 export default function SearchAppBar({handleToggleDarkMode}) {
 
   let navigate = useNavigate()
 
-const register = () => {
-  //props.onAuthenticated(false)
-  navigate('/register')
-}
+  const [darkMode, setDarkMode] = React.useState(true);
 
 const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDecoration: 'none' }}>Home</Link>, <Link className='link' to="/speechrec" style={{ color: '#505F98', textDecoration: 'none' }}>Speech Recognition</Link>, <Link className='link' to="/settings" style={{ color: '#505F98', textDecoration: 'none' }}> Settings</Link>];
   const settings = [<Link className='link' to="/login" style={{ color: '#505F98', textDecoration: 'none' }}>Login</Link>, <Link className='link' to="register" style={{ color: '#505F98', textDecoration: 'none' }}>Register</Link>];
@@ -89,9 +87,18 @@ const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDeco
           </MenuItem>
           ))}
 
-          <Button>
-            <DarkModeIcon /> / <LightModeIcon />
-          </Button>
+            <ThemeContext.Consumer>
+              {({ changeTheme }) => (
+                <Button
+                onClick={()=> {
+                  setDarkMode(!darkMode);
+                  changeTheme(darkMode ? themes.light : themes.dark);
+                }}>
+                  <i className={darkMode ? 'fas fa-sun' : 'fas fa-moon'}></i>
+                <DarkModeIcon /> / <LightModeIcon />
+              </Button>
+              )}
+          </ThemeContext.Consumer>
           
         </Toolbar>
       </AppBar>
