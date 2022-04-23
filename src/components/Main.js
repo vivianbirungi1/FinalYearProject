@@ -124,7 +124,7 @@ function Main({activeNote, onUpdateNote}) {
                 style={{marginLeft: "550px"}}
                 onClick={() => speak({text, voice, rate, pitch })}
               >
-                <PlayArrowIcon sx={{   fontSize: 70 }}/>
+                <PlayArrowIcon sx={{fontSize: 70 }}/>
               </Button>
             )}
 

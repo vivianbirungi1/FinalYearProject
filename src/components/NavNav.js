@@ -54,7 +54,7 @@ const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDeco
           </MenuItem>
           ))}
 
-        
+          
           <Typography
             variant="h6"
             noWrap
@@ -62,17 +62,12 @@ const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDeco
             component="div"
             sx={{color: '#505F98', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
+            <Link to="/" style={{ color: '#505F98', textDecoration: 'none'}}>
             Speechverse
+            </Link>
           </Typography>
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
+         
+         
           
           {settings.map((setting) => ( 
           <MenuItem key={setting}>

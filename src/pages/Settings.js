@@ -44,7 +44,7 @@ const Settings = props => {
     <Container>
 
 <div class="content-spacing top">
-      <Link to="/"><Button style={{
+      <Link to="/" style={{textDecoration: 'none'}}><Button style={{
         borderRadius: 35,
         backgroundColor: "#ffffff",
         color: "#000000",

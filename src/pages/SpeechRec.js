@@ -1,4 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
+import { Button} from '@mui/material';
+import Typography from '@mui/material/Typography';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import {Link} from 'react-router-dom';
+
+
 
 //creating eindow javascript object
 //'or' for chrome
@@ -64,21 +71,46 @@ function SpeechRec() {
 
     return(
         <>
-        <h1>Voice Notes</h1>
+
+<div class="content-spacing top">
+      <Link to="/" style={{textDecoration: 'none'}}><Button style={{
+        borderRadius: 35,
+        backgroundColor: "#ffffff",
+        color: "#000000",
+        padding: "10px 26px",
+        contentAlign: "center",
+        fontSize: "18px"
+    }} variant="contained"><ArrowBackIcon sx={{color: '#000000'}} />Home</Button></Link>
+      </div>
+
+        <Typography variant="h3" className="centertext top3">Voice Notes</Typography>
+        <RecordVoiceOverIcon sx={{ marginLeft: "870px", fontSize: 60 }} />
+
         <div className='container'>
             <div className='box'>
-                <h2>Current Note</h2>
+                <Typography variant="h4">Current Note</Typography>
                 {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
-                <button onClick={handleSaveNote} disabled={!note} className='buttonStyle'>Save Note</button>
-                <button onClick={()=> setIsListening(prevState => !prevState)} className='buttonStyle'>
+                <Button style={{
+        borderRadius: 35,
+        backgroundColor: "#FFBA3E",
+        padding: "18px 36px",
+        fontSize: "18px"
+    }} onClick={handleSaveNote} disabled={!note} className='buttonStyle top3'>Save Note</Button>
+                <Button style={{
+        borderRadius: 35,
+        backgroundColor: "#2D95EC",
+        color: '#000000',
+        padding: "18px 36px",
+        fontSize: "18px"
+    }} onClick={()=> setIsListening(prevState => !prevState)} className='buttonStyle top3'>
                     Start/Stop
-                    </button>
+                    </Button>
                     <p>{note}</p>
 
             </div>
             
             <div className='box'>
-                <h2>Saved Notes</h2>
+                <Typography variant="h4">Saved Notes</Typography>
                 {savedNotes.map(n => (
 
                     <p key={n}>{n}</p>

@@ -271,9 +271,11 @@ select{
 
 .box {
   box-shadow: -4px 10px 35px -1px rgba(0, 0, 0, 0.75);
-  min-height: 20rem;
+  min-height: 30rem;
   margin: 30px;
+  margin-left: 30px;
   padding: 20px;
+  width: 800px;
   border-radius: 5px;
 }
 
