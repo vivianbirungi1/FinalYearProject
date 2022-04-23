@@ -258,6 +258,11 @@ select{
   color: white;
 }
 
+.white-content link {
+  background: #000000;
+  color: white;
+}
+
 .container {
   margin: 20px;
   display: grid;

@@ -55,7 +55,7 @@ const Settings = props => {
       </div>
 
 <div>
-    <Typography className='top2 centertext' variant="h4">Settings</Typography>
+    <Typography className='top3 centertext' variant="h4">Settings</Typography>
     </div>
 
     <div>
@@ -98,7 +98,8 @@ const Settings = props => {
     <Typography className='loginTop top centertext' variant="h6"><FormatColorTextIcon/>Text</Typography>
 
     <div className='settings settingsTop'>
-    <FormControl sx={{ m: 1, minWidth: 300 }}>
+
+    {/* <FormControl sx={{ m: 1, minWidth: 300 }}>
         <InputLabel id="highlight1">Highlight</InputLabel>
         <Select
           value={highlight}
@@ -110,44 +111,53 @@ const Settings = props => {
             <em>None</em>
           </MenuItem>
           <MenuItem style={{backgroundColor: '#2EE7F3'}} value={10}>Blue</MenuItem>
-          <MenuItem style={{backgroundColor: '#FFE03E'}} value={21}>Yellow</MenuItem>
-          <MenuItem style={{backgroundColor: '#E85CFF'}} value={22}>Pink</MenuItem>
+          <MenuItem style={{backgroundColor: '#FFE03E'}} value={11}>Yellow</MenuItem>
+          <MenuItem style={{backgroundColor: '#E85CFF'}} value={12}>Pink</MenuItem>
         </Select>
-      </FormControl>
+      </FormControl> */}
 
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
-        <InputLabel id="size1">Size</InputLabel>
-        <Select
-          value={size}
-          onChange={handleChange}
-          autoWidth
-          label="Size"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Regular 12</MenuItem>
-          <MenuItem value={21}>Bold 12</MenuItem>
-          <MenuItem value={22}>Italic 12</MenuItem>
-        </Select>
-      </FormControl>
+      <select
+              className="top"
+           
+              label="Highlight"
+            >
+              <option style={{backgroundColor: '#2EE7F3'}}>Blue</option>
+              <option style={{backgroundColor: '#FFE03E'}}>Yellow</option>
+              <option style={{backgroundColor: '#E85CFF'}}>Purple</option>
+            </select>
 
-      <FormControl sx={{ m: 1, minWidth: 300 }}>
-        <InputLabel id="font1">Font</InputLabel>
-        <Select
-          value={font}
-          onChange={handleChange}
-          autoWidth
-          label="Font"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Arial</MenuItem>
-          <MenuItem value={21}>Helvetica</MenuItem>
-          <MenuItem value={22}>Calibri</MenuItem>
-        </Select>
-      </FormControl>
+      <select
+              className="top"
+           
+              label="Font Weight"
+            >
+              <option>Regular</option>
+              <option style={{fontWeight: 'bold'}}>Bold</option>
+              <option style={{fontWeight: 'italic'}}>Italic</option>
+            </select>
+
+
+      <select
+              className="top"
+              placeholder="Default"
+           
+              label="Font Size"
+            >
+              <option>12</option>
+              <option>14</option>
+              <option>16</option>
+            </select>
+
+
+      <select
+              className="top"
+           
+              label="Font"
+            >
+              <option>Arial</option>
+              <option>Helvetica</option>
+              <option>Calibri</option>
+            </select>
 
 
             

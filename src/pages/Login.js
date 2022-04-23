@@ -62,6 +62,7 @@ const Login = props => {
         borderRadius: 35,
         backgroundColor: "#FFBA3E",
         padding: "18px 36px",
+        color: '#000000',
         contentAlign: "center",
         fontSize: "18px"
     }} variant="contained">Login</Button>
