@@ -116,7 +116,7 @@ function Main({activeNote, onUpdateNote}) {
 
 {speaking ? (
               <Button type="button" style={{marginLeft: "550px"}} onClick={cancel}>
-                <StopIcon sx={{ color: '#000000', fontSize: 70 }}/>
+                <StopIcon sx={{  fontSize: 70 }}/>
               </Button>
             ) : (
               <Button
@@ -124,7 +124,7 @@ function Main({activeNote, onUpdateNote}) {
                 style={{marginLeft: "550px"}}
                 onClick={() => speak({text, voice, rate, pitch })}
               >
-                <PlayArrowIcon sx={{  color: '#000000', fontSize: 70 }}/>
+                <PlayArrowIcon sx={{   fontSize: 70 }}/>
               </Button>
             )}
 

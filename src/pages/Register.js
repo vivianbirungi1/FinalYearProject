@@ -38,7 +38,7 @@ const Login = props => {
 
     <Grid item md={6} xs={2}>
       
-      <img className="imageTop image" src={register} />
+      <img className="imageTop image2" src={register} />
 
     </Grid>
 

@@ -94,7 +94,7 @@ const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDeco
                   setDarkMode(!darkMode);
                   changeTheme(darkMode ? themes.light : themes.dark);
                 }}>
-                  <i className={darkMode ? 'fas fa-sun' : 'fas fa-moon'}></i>
+                 
                 <DarkModeIcon /> / <LightModeIcon />
               </Button>
               )}

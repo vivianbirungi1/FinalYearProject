@@ -232,6 +232,11 @@ select{
   height: 650px;
 }
 
+.image2{
+  width: 550px;
+  height: 650px;
+}
+
 .bgGrey{
   background-color:#F5F5F5;
   
@@ -248,9 +253,31 @@ select{
   color: white;
 }
 
-.white-content body {
+.white-content Button {
   background: #000000;
   color: white;
+}
+
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  box-shadow: -4px 10px 35px -1px rgba(0, 0, 0, 0.75);
+  min-height: 20rem;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.buttonStyle {
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
 }
 
 

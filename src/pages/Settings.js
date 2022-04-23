@@ -18,8 +18,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MicIcon from '@mui/icons-material/Mic';
 import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
+import { ThemeContext, themes } from '../components/contextTheme';
+import ToggleDark from '../components/toggleDark';
 
 const Settings = props => {
+
+    const {
+        handleToggleDarkMode
+ } = props
 
     const [highlight, setHighlight] = React.useState('');
     const [size, setSize] = React.useState('');
@@ -31,6 +37,7 @@ const Settings = props => {
     setFont(event.target.value);
   };
 
+  const [darkMode, setDarkMode] = React.useState(true);
 
 
   return (
@@ -151,18 +158,33 @@ const Settings = props => {
     <Typography className='loginTop top centertext' variant="h6"><LightbulbCircleIcon/>Theme</Typography>
     <div className="settings settingsTop">
 
-    <div class="content-spacing centertext">
-      <Button style={{
+
+   <ThemeContext.Consumer>
+   {({ changeTheme }) => (
+      <Button 
+      onClick={()=> {
+        setDarkMode(darkMode);
+        changeTheme(darkMode);
+      }}
+      style={{
         borderRadius: 35,
         backgroundColor: "#2D95EC",
         padding: "18px 106px",
         contentAlign: "center",
         fontSize: "18px"
     }} variant="contained"><LightModeIcon />Light Mode</Button>
-      </div>
+    )}
+   </ThemeContext.Consumer>
 
-      <div class="content-spacing centertext">
-      <Button style={{
+     
+      <ThemeContext.Consumer>
+        {({ changeTheme }) => (
+      <Button
+      onClick={()=> {
+        setDarkMode(!darkMode);
+        changeTheme(themes.light );
+      }}
+       style={{
         borderRadius: 35,
         backgroundColor: "#FFBA3E",
         color: "#000000",
@@ -170,7 +192,10 @@ const Settings = props => {
         contentAlign: "center",
         fontSize: "18px"
     }} variant="contained"><DarkModeIcon sx={{color: '#000000'}} />Dark Mode</Button>
-      </div>
+      
+      )}
+     
+      </ThemeContext.Consumer>
 
 
     </div>
