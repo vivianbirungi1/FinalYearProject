@@ -117,7 +117,7 @@ function Main({activeNote, onUpdateNote}) {
 
 {speaking ? (
               <Button type="button" style={{marginLeft: "550px"}} onClick={cancel}>
-                <StopIcon sx={{  fontSize: 70 }}/>
+                <StopIcon sx={{  color: '#FFBA3E', stroke: 'black', fontSize: 70 }}/>
               </Button>
             ) : (
               <Button
