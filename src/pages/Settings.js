@@ -46,17 +46,18 @@ const Settings = props => {
 <div class="content-spacing top">
       <Link to="/" style={{textDecoration: 'none'}}><Button style={{
         borderRadius: 35,
-        backgroundColor: "#ffffff",
-        color: "#000000",
-        padding: "10px 26px",
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        padding: "6px 22px",
         contentAlign: "center",
         fontSize: "18px"
-    }} variant="contained"><ArrowBackIcon sx={{color: '#000000'}} />Home</Button></Link>
+    }} variant="contained"><ArrowBackIcon sx={{color: '#ffffff'}} />Return to Home</Button></Link>
       </div>
 
 <div>
     <Typography className='top3 centertext' variant="h4">Settings</Typography>
     </div>
+    <hr/>
 
     <div>
     <Typography className=' top3 centertext' variant="h6"> <MicIcon/>Voice</Typography>
@@ -93,6 +94,8 @@ const Settings = props => {
             </div>
             </div>
     </div>
+
+    <hr/>
 
     <div>
     <Typography className='loginTop top centertext' variant="h6"><FormatColorTextIcon/>Text</Typography>
@@ -164,6 +167,8 @@ const Settings = props => {
             </div>
     </div>
 
+    <hr/>
+
     <div>
     <Typography className='loginTop top centertext' variant="h6"><LightbulbCircleIcon/>Theme</Typography>
     <div className="settings settingsTop">
@@ -179,7 +184,7 @@ const Settings = props => {
       style={{
         borderRadius: 35,
         backgroundColor: "#2D95EC",
-        padding: "18px 106px",
+        padding: "15px 100px",
         contentAlign: "center",
         fontSize: "18px"
     }} variant="contained"><LightModeIcon />Light Mode</Button>
@@ -198,7 +203,7 @@ const Settings = props => {
         borderRadius: 35,
         backgroundColor: "#FFBA3E",
         color: "#000000",
-        padding: "18px 106px",
+        padding: "15px 100px",
         contentAlign: "center",
         fontSize: "18px"
     }} variant="contained"><DarkModeIcon sx={{color: '#000000'}} />Dark Mode</Button>

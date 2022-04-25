@@ -10,10 +10,16 @@ import {Grid} from '@material-ui/core';
 import register from '../images/register.png';
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
+// import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
+// import awsconfig from './aws-exports';
+// import { Authenticator } from '@aws-amplify/ui-react';
+// import '@aws-amplify/ui-react/styles.css';
 
 
+// Amplify.configure(awsconfig);
+// Auth.configure(awsconfig);
 
-const Login = props => {
+const Register = props => {
 
   let navigate = useNavigate()
 
@@ -85,4 +91,4 @@ const Login = props => {
   )
 }
 
-export default Login
+export default Register

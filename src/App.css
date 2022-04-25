@@ -219,6 +219,14 @@ select{
   padding-top: 40px ;
 }
 
+.spaceLeft{
+  padding-left: 50px;
+}
+
+.spaceLeft2{
+  padding-left: 35px;
+}
+
 .top3{
   padding-top: 20px ;
 }
@@ -277,6 +285,16 @@ select{
   padding: 20px;
   width: 800px;
   border-radius: 5px;
+}
+
+.shadBox{
+  box-shadow: -2px 5px 25px -1px rgba(0, 0, 0, 0.75);
+
+}
+
+.shadBox2{
+  box-shadow: -2px 1px 5px -1px rgba(0, 0, 0, 0.75);
+
 }
 
 .buttonStyle {

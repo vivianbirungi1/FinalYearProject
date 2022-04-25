@@ -73,7 +73,7 @@ function Main({activeNote, onUpdateNote}) {
         <div className="app-main-note-edit">
 
             {/* updating a part of the array  */}
-            <input type="text" 
+            <input className="shadBox2" type="text" 
             id="title" 
             placeholder="Note Title"
             value={activeNote.title} 
@@ -83,6 +83,7 @@ function Main({activeNote, onUpdateNote}) {
 
             {/* Text to Speech working when passing in "text" value, Update does not work */}
             <textarea
+            className="shadBox2"
               id="message"
               name="message"
               //rows={3}
@@ -124,11 +125,11 @@ function Main({activeNote, onUpdateNote}) {
                 style={{marginLeft: "550px"}}
                 onClick={() => speak({text, voice, rate, pitch })}
               >
-                <PlayArrowIcon sx={{fontSize: 70 }}/>
+                <PlayArrowIcon sx={{color: '#FFBA3E', stroke: 'black', strokeWeight: '1', fontSize: 70 }}/>
               </Button>
             )}
 
-
+                <div className="spaceLeft">
                 <div>
                 <Typography variant="h6" component="div" htmlFor="voice">Voice</Typography>
                 </div>
@@ -149,13 +150,15 @@ function Main({activeNote, onUpdateNote}) {
                 </option>
               ))}
             </select>
+            </div>
 
-            <div className="top" style={styleContainerRatePitch}>
+            <div className="top spaceLeft" style={styleContainerRatePitch}>
               <div style={styleFlexRow}>
                 <Typography variant="h6" component="div" htmlFor="rate">Rate: </Typography>
-                <Typography variant="h6" component="div" className="rate-value">{rate}</Typography>
+                <Typography variant="h6" component="div" className="rate-value"> {rate}</Typography>
               </div>
               <input
+              style={{width: "1035px"}}
                 type="range"
                 min="0.5"
                 max="2"
@@ -167,12 +170,13 @@ function Main({activeNote, onUpdateNote}) {
                 }}
               />
             </div>
-            <div className="top" style={styleContainerRatePitch}>
+            <div className="top spaceLeft" style={styleContainerRatePitch}>
               <div style={styleFlexRow}>
                 <Typography variant="h6" component="div" htmlFor="pitch">Pitch: </Typography>
                 <Typography variant="h6" component="div" className="pitch-value">{pitch}</Typography>
               </div>
               <input
+              style={{width: "1035px"}}
                 type="range"
                 min="0"
                 max="2"
@@ -186,9 +190,6 @@ function Main({activeNote, onUpdateNote}) {
             </div>
    
 
-                {/* <div className="app-main-note-voice">
-                    <button>Speak</button>
-                </div> */}
                 
                 </div>
 

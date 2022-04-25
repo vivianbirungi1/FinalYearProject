@@ -2,6 +2,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 import {useState} from 'react';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
@@ -81,7 +83,7 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
             
 
-            <button onClick={onAddNote}>Add</button>
+            <button onClick={onAddNote}>Add <AddCircleOutlineIcon/></button>
 
             
             
@@ -102,7 +104,7 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
 
 {/* will output all the content for each note. can access data for each note using notes map. */}
-            <div className="app-sidebar-notes">
+            <div className="app-sidebar-notes shadBox">
 
                 {sortedNotes.map((note) => (
 
@@ -113,7 +115,7 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
     <strong>{note.title}</strong>
 
-    <button onClick={ () => onDeleteNote(note.id)}>Delete</button>
+    <button onClick={ () => onDeleteNote(note.id)}>Delete <DeleteIcon/></button>
     
     
     </div>

@@ -75,15 +75,16 @@ function SpeechRec() {
 <div class="content-spacing top">
       <Link to="/" style={{textDecoration: 'none'}}><Button style={{
         borderRadius: 35,
-        backgroundColor: "#ffffff",
-        color: "#000000",
-        padding: "10px 26px",
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        padding: "6px 22px",
         contentAlign: "center",
         fontSize: "18px"
-    }} variant="contained"><ArrowBackIcon sx={{color: '#000000'}} />Home</Button></Link>
+    }} variant="contained"><ArrowBackIcon sx={{color: '#ffffff'}} />Return to Home</Button></Link>
       </div>
 
-        <Typography variant="h3" className="centertext top3">Voice Notes</Typography>
+        <Typography variant="h3" className="centertext top">Voice Notes</Typography>
+        <Typography variant="h6" className="centertext top">Press Record and turn your voice into text! </Typography>
         <RecordVoiceOverIcon sx={{ marginLeft: "870px", fontSize: 60 }} />
 
         <div className='container'>
@@ -103,7 +104,7 @@ function SpeechRec() {
         padding: "18px 36px",
         fontSize: "18px"
     }} onClick={()=> setIsListening(prevState => !prevState)} className='buttonStyle top3'>
-                    Start/Stop
+                    Record/Stop
                     </Button>
                     <p>{note}</p>
 
