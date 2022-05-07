@@ -27,11 +27,11 @@ const Login = props => {
     </div>
 
         <div className="form-group loginForm">
-        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email"  /> <br />
+        <TextField className='formDM' label="Email" fullWidth sx={{ s: 1 }}  name= "email"  /> <br />
         </div>
 
         <div className="form-group loginForm">
-        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" />
+        <TextField className='formDM' label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" />
         </div>
 
         

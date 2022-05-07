@@ -261,12 +261,22 @@ select{
   color: white;
 }
 
+.formDM {
+  background: #ffffff;
+  color: gray;
+}
+
 .white-content Button {
   background: #000000;
   color: white;
 }
 
 .white-content link {
+  background: #000000;
+  color: white;
+}
+
+.white-content TextField {
   background: #000000;
   color: white;
 }

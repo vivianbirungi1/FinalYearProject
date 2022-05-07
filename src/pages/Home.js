@@ -8,7 +8,7 @@ import {Grid} from '@material-ui/core';
 const Home = () => {
 
   //array to create getters and setters
-const  [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
+const  [notes, setNotes] = useState(!localStorage.notes ? ([]) : (JSON.parse(localStorage.notes) ));
 
 const [activeNote, setActiveNote] = useState(false);
 
