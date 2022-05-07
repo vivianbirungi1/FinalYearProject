@@ -19,7 +19,7 @@ export default function SearchAppBar({handleToggleDarkMode}) {
 
   const [darkMode, setDarkMode] = React.useState(true);
 
-const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDecoration: 'none' }}>Text to Speech</Link>, <Link className='link' to="/speechrec" style={{ color: '#505F98', textDecoration: 'none' }}>Speech Recognition</Link>, <Link className='link' to="/settings" style={{ color: '#505F98', textDecoration: 'none' }}> Settings</Link>];
+const pages = [<Link className='link' to="/" style={{ color: '#505F98', textDecoration: 'none' }}>Home</Link>, <Link className='link' to="/textspeech" style={{ color: '#505F98', textDecoration: 'none' }}>Text to Speech</Link>, <Link className='link' to="/speechrec" style={{ color: '#505F98', textDecoration: 'none' }}>Speech Recognition</Link>, <Link className='link' to="/settings" style={{ color: '#505F98', textDecoration: 'none' }}> Settings</Link>];
   const settings = [<Link className='link' to="/login" style={{ color: '#505F98', textDecoration: 'none' }}>Login</Link>, <Link className='link' to="register" style={{ color: '#505F98', textDecoration: 'none' }}>Register</Link>];
 
 

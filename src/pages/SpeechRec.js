@@ -86,7 +86,7 @@ function SpeechRec() {
 
         <Typography variant="h3" className="centertext top">Voice Notes</Typography>
         <Typography variant="h6" className="centertext top">Press Record and turn your voice into text! </Typography>
-        <RecordVoiceOverIcon sx={{ marginLeft: "980px", fontSize: 60 }} />
+        <RecordVoiceOverIcon sx={{ marginLeft: "990px", fontSize: 60 }} />
 
         <div className='container'>
             <div className='box'>
