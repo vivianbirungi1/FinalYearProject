@@ -21,21 +21,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Register = props => {
 
-  let navigate = useNavigate()
-
-  const [form, setForm] = useState(false)
-
-  const handleForm = e => {
-
-    setForm(prevState => ({
-      ...prevState,
-      [e.target.name] : e.target.value
-    }))
-
-    console.log(form)
-  }
   
-
+  
 
   return (
     <Container>
@@ -59,11 +46,11 @@ const Register = props => {
     </div>
 
         <div className="form-group loginForm">
-        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email" onChange={handleForm} /> <br />
+        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email" /> <br />
         </div>
 
         <div className="form-group loginForm">
-        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" onChange={handleForm} />
+        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" />
         </div>
 
         

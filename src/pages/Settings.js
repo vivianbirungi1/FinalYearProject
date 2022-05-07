@@ -1,17 +1,8 @@
 import * as React from 'react';
-import { useState } from 'react' 
-//import axios from 'axios'
-//import axios from '../config'
-import {TextField, Button} from '@mui/material';
-import { useNavigate  } from 'react-router';
+import { Button} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {Link} from 'react-router-dom';
-import {Grid} from '@material-ui/core';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -19,7 +10,6 @@ import MicIcon from '@mui/icons-material/Mic';
 import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 import { ThemeContext, themes } from '../components/contextTheme';
-import ToggleDark from '../components/toggleDark';
 
 const Settings = props => {
 

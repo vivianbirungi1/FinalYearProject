@@ -4,7 +4,8 @@ import { Button} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {Link} from 'react-router-dom';
-
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import MicIcon from '@mui/icons-material/Mic';
 
 
 //creating eindow javascript object
@@ -85,12 +86,12 @@ function SpeechRec() {
 
         <Typography variant="h3" className="centertext top">Voice Notes</Typography>
         <Typography variant="h6" className="centertext top">Press Record and turn your voice into text! </Typography>
-        <RecordVoiceOverIcon sx={{ marginLeft: "870px", fontSize: 60 }} />
+        <RecordVoiceOverIcon sx={{ marginLeft: "980px", fontSize: 60 }} />
 
         <div className='container'>
             <div className='box'>
                 <Typography variant="h4">Current Note</Typography>
-                {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
+                {isListening ? <span><MicIcon sx={{color: '#5c5c5c',  mr: 2, fontSize: 40 }}/></span> : <span><RadioButtonCheckedIcon sx={{color: '#e81c0e',  mr: 2, fontSize: 40 }}/><MicIcon sx={{color: '#5c5c5c',  mr: 2, fontSize: 40 }}/></span>}
                 <Button style={{
         borderRadius: 35,
         backgroundColor: "#FFBA3E",
@@ -106,7 +107,7 @@ function SpeechRec() {
     }} onClick={()=> setIsListening(prevState => !prevState)} className='buttonStyle top3'>
                     Record/Stop
                     </Button>
-                    <p>{note}</p>
+                    <Typography variant="h5">{note}</Typography>
 
             </div>
             
@@ -114,7 +115,7 @@ function SpeechRec() {
                 <Typography variant="h4">Saved Notes</Typography>
                 {savedNotes.map(n => (
 
-                    <p key={n}>{n}</p>
+                    <Typography variant="h5" key={n}>{n}</Typography>
                 ))}
             </div>
 

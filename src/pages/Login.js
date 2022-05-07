@@ -1,8 +1,4 @@
-import { useState } from 'react' 
-//import axios from 'axios'
-//import axios from '../config'
 import {TextField, Button} from '@mui/material';
-import { useNavigate  } from 'react-router';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {Link} from 'react-router-dom';
@@ -14,21 +10,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 
 const Login = props => {
-
-  let navigate = useNavigate()
-
-  const [form, setForm] = useState(false)
-
-  const handleForm = e => {
-
-    setForm(prevState => ({
-      ...prevState,
-      [e.target.name] : e.target.value
-    }))
-
-    console.log(form)
-  }
-  
 
 
   return (
@@ -47,11 +28,11 @@ const Login = props => {
     </div>
 
         <div className="form-group loginForm">
-        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email" onChange={handleForm} /> <br />
+        <TextField label="Email" fullWidth sx={{ s: 1 }}  name= "email"  /> <br />
         </div>
 
         <div className="form-group loginForm">
-        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" onChange={handleForm} />
+        <TextField label="Password" fullWidth sx={{ s: 1 }}  type="password" name= "password" />
         </div>
 
         

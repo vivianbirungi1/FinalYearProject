@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import Sidebar from '../components/Sidebar';
 import Main from '../components/Main';
 import uuid from 'react-uuid';
-import {Grid, Container} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
 
 const Home = () => {
