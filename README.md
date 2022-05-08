@@ -1,6 +1,15 @@
+# Speechverse Application
+Hosted site: https://speechverse.azurewebsites.net/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# CSS Framework
+The CSS framwork used was Material UI.
+
+# Note 
+If build is run, web.config file needs to be re-added for hosted site to work. File found in build folder or by contacting the developer.
 
 ## Available Scripts
 
