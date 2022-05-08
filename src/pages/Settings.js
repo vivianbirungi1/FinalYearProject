@@ -17,6 +17,8 @@ const Settings = props => {
         handleToggleDarkMode
  } = props
 
+//  originally planned to highlight text and increase and decrease font size and change font family in the application.
+// was not implemented but would implement in future development of the application.
     const [highlight, setHighlight] = React.useState('');
     const [size, setSize] = React.useState('');
     const [font, setFont] = React.useState('');
@@ -27,8 +29,16 @@ const Settings = props => {
     setFont(event.target.value);
   };
 
+  // dark mode passed as boolean to listen to whether darkmode is true or not.
   const [darkMode, setDarkMode] = React.useState(true);
 
+// currently forms are for display except for dark mode and light mode buttons.
+  // forms for highlighting text, changing font size and font family 
+  // form for changing pitch and speed
+  // buttons for changing between light mode and dark mode
+  // Button stored insdie theme context wrapper to listen out for change in theme.
+// if light mode button is clicked then the function listens out for if dark mode is set to true, if so then it is changed to false and site is changed to light mode.
+// if dark mode button is clicked then the function listens out for if dark mode is set to false, if so then it is changed to true and site is changed to dark mode.
 
   return (
     <Container>
@@ -91,23 +101,6 @@ const Settings = props => {
     <Typography className='loginTop top centertext' variant="h6"><FormatColorTextIcon/>Text</Typography>
 
     <div className='settings settingsTop'>
-
-    {/* <FormControl sx={{ m: 1, minWidth: 300 }}>
-        <InputLabel id="highlight1">Highlight</InputLabel>
-        <Select
-          value={highlight}
-          onChange={handleChange}
-          
-          label="Highlight"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem style={{backgroundColor: '#2EE7F3'}} value={10}>Blue</MenuItem>
-          <MenuItem style={{backgroundColor: '#FFE03E'}} value={11}>Yellow</MenuItem>
-          <MenuItem style={{backgroundColor: '#E85CFF'}} value={12}>Pink</MenuItem>
-        </Select>
-      </FormControl> */}
 
       <select
               className="top"

@@ -1,3 +1,5 @@
+// creating a theme wrapper that will use the created context and pass in the new changes.
+
 import React, { useState, useEffect } from 'react';
 import { ThemeContext, themes } from '../components/contextTheme';
 

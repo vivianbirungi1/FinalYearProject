@@ -1,20 +1,19 @@
 import {Button} from '@mui/material';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import {Link} from 'react-router-dom';
-import {Grid} from '@material-ui/core';
-import landing from '../images/landing.png';
-import wave from '../images/wave.gif';
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
 
 const Landing = () => {
 
-
+// return function handles what is displayed on the page.
+// display of image within a card component from Material UI.
+// image sourced from Dribbble. overlaying the image is text welcoming user to page.
+// and buttons leading user to main pages being Text to Speech and Speech to Text pages.
+// various Material UI components used such as Cards, Links, Box, CardMedia, Buttona and Typography.
     return(
       
             <Card maxWidth="100%">

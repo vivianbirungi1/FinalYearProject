@@ -1,10 +1,10 @@
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
-import {useState} from 'react';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+// destructuring the function and passing in props which become local variables
 function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
 
@@ -12,6 +12,7 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
       // compare a and b so that most recently modified gets pushed to top of notes array
     const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
 
+    // searchbar styling
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -41,7 +42,6 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
         color: 'black',
         '& .MuiInputBase-input': {
           padding: theme.spacing(1, 1, 1, 0),
-          // vertical padding + font size from searchIcon
           paddingLeft: `calc(1em + ${theme.spacing(4)})`,
           transition: theme.transitions.create('width'),
           width: '100%',
@@ -54,26 +54,6 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
         },
       }));
 
-    //   const [searchInput, setSearchInput] = useState("");
-     
-    //   const title = [1]
-
-    //   const title = [
-    //       {title}
-    //   ]
-
-    //   title = {title}
-
-    //   const handleChange = (e) => {
-    //     e.preventDefault();
-    //     setSearchInput(e.target.value);
-    //   };
-    //   if (searchInput.length > 0) {
-    //       title.filter((title) => {
-    //       return title.name.match(searchInput);
-    //   });
-    //   }
-
 
     return <div className="app-sidebar">
 
@@ -82,11 +62,9 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
             <h1>Notes</h1>
 
             
-
+{/* when add icon is clicked, a new note is added to the array using onAddNote function  */}
             <button onClick={onAddNote}>Add <AddCircleOutlineIcon/></button>
-
-            
-            
+ 
             </div>
 
             <Search>
@@ -94,9 +72,6 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-            // type='text'
-            // onChange={handleChange}
-            // value={searchInput}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
@@ -113,8 +88,10 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
 <div className="sidebar-note-title">
 
+{/* note title display in bold */}
     <strong>{note.title}</strong>
 
+{/* when delete icon is clicked, note is deleted using id */}
     <button onClick={ () => onDeleteNote(note.id)}>Delete <DeleteIcon/></button>
     
     
@@ -124,6 +101,7 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
     <small className="note-meta">
 
+{/* displaying the last modified with date and time */}
         Last modified {new Date(note.lastModified).toLocaleDateString("en-GB", {
             hour: "2-digit",
             minute: "2-digit",
@@ -145,4 +123,5 @@ function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
 
 }
 
+// export Sidebar component so it is accessible
 export default Sidebar;

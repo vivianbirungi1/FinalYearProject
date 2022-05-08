@@ -4,14 +4,14 @@ import uuid from 'react-uuid';
 import './App.css';
 import Container from '@mui/material/Container';
 
-//COMPONENETS
+//COMPONENETS - imported to display on frontend
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 import NavNav from './components/NavNav';
 import ThemeContextWrapper from './components/themeContextWrapper';
 import { ThemeContext } from './components/contextTheme';
 
-//PAGES
+//PAGES - imported to display on frontend
  import Home from './pages/Home';
  import Login from './pages/Login';
  import Register from './pages/Register';
@@ -20,7 +20,7 @@ import { ThemeContext } from './components/contextTheme';
  import Landing from './pages/Landing';
 
 
-
+// Router component handling the routes between pages. routes for each page is created. when page is clicked on, should navigate to that specific route
 function App() {
 
 

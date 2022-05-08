@@ -1,23 +1,21 @@
-import ReactMarkdown from "react-markdown";
 import React from 'react';
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {useEffect, useState} from 'react';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StopIcon from '@mui/icons-material/Stop';
 import Typography from '@mui/material/Typography';
-import {TextField, Button} from '@mui/material';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import {Button} from '@mui/material';
 
 
 function Main({activeNote, onUpdateNote}) {
 
+  // reading the text, pitch, rate and voiceIndex values, assigning to useState js function 
         const [text, setText] = useState(null);
         const [pitch, setPitch] = useState(1);
         const [rate, setRate] = useState(1);
         const [voiceIndex, setVoiceIndex] = useState(null);
         const onEnd = () => {
-          // You could do something here after speaking has finished
+          // Could do something here after speaking has finished
         };
         const { speak, cancel, speaking, supported, voices } = useSpeechSynthesis({
           onEnd});
@@ -32,6 +30,8 @@ function Main({activeNote, onUpdateNote}) {
     marginBottom: 12,
   };
 
+  // if the active note body is passed in an an active note exists in the array then setText.
+  //this allows for the body in the text area to be updated and read aloud
   useEffect(() => {
     if(activeNote){
       setText(activeNote.body);
@@ -62,17 +62,16 @@ function Main({activeNote, onUpdateNote}) {
 
     };
     
-
+// if there is no active note selected, display "Add new note"
     if(!activeNote) return <div className="no-active-note">Add a new note</div>
 
-     //tts[setText, activeNote] = (null)
 
 
     return <div className="app-main">
 
         <div className="app-main-note-edit">
 
-            {/* updating a part of the array  */}
+            {/* updating Title part of the array  */}
             <input className="shadBox2" type="text" 
             id="title" 
             placeholder="Note Title"
@@ -81,29 +80,17 @@ function Main({activeNote, onUpdateNote}) {
             autoFocus />
 
 
-            {/* Text to Speech working when passing in "text" value, Update does not work */}
             <textarea
             className="shadBox2"
               id="message"
               name="message"
-              //rows={3}
+          
               placeholder="Write your note here..."
               value={activeNote.body}
-              // onChange={(event) => {
-              //   setText(event.target.value);
-              // }}
+           
               onChange={(e) => onEditField("body", e.target.value)}
             />
 
-
-            {/* Update working when passing in "activeNote" value, Text to Speech  */}
-            {/* <textarea 
-            id="body" 
-            name="body"
-            placeholder="Write your note here..." 
-            value ={activeNote.body} 
-            onChange={(e) => onEditField("body", e.target.value) && setText("text", e.target.value)} 
-            /> */}
             
             
             </div>

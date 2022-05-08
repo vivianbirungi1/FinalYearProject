@@ -8,6 +8,13 @@ import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 
+// return function handles what is displayed on the page.
+// originally planned to pass in props in this function to enable authentication with AWS but was not acheived.
+// Grid spacing using to align image and forms side by side.
+// display includes form with email and password entry. button underneath forms.
+// buttons for option for user to sign in using external accounts
+// image sourced from Dribbble and stored in images folder.
+// link to register page available on this page.
 const Login = props => {
 
 

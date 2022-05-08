@@ -23,17 +23,23 @@ function SpeechRec() {
     // const [savedNotes, setSavedNotes] = useState(JSON.parse(localStorage) || []) 
     const [savedNotes, setSavedNotes] = useState([]) //array of saved notes which will be looped through
 
-
+// handleListen function using is listening array being passed in
     useEffect(() => {
         handleListen()
     }, [isListening])
 
+    // attempted to use similar method to save notes to localstorage as in text to speech, unsuccessful due to JSON parse errors.
+    
     // useEffect(() => {
     //     localStorage.setItem("savedNotes", JSON.stringify(savedNotes))
       
     //   }, [savedNotes]);
 
-
+// handleListen function
+// listens out for speaker when mic starts. mic is turned on when button is clicked and recording starts. consoling to check action is happening.
+// when button is clicked again, mic stops, console is written to and result should be a transcript.
+// using if statement to listen for when mic or on and when it is stopped.
+// mic result should display words spoken into mic by user.
     const handleListen = () => {
         if(isListening) {
             mic.start()
@@ -64,12 +70,17 @@ function SpeechRec() {
         }
     }
 
-
+// second attempt at saving notes. unsuccessful
     const handleSaveNote = () => {
         setSavedNotes([...savedNotes, note])
         setNote('')
     }
 
+    // displaying two boxes. one box has buttons and picks up what is being said. 
+    // when finished recording, click save note button and note is passed to second box where it should be saved.
+    // icon used from Material UI icons.
+    // note: useful when users speak aloud
+    // button triggers isListening function to hear for a transcript when user speaks
     return(
         <>
 
